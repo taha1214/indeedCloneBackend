@@ -1,7 +1,7 @@
 const express = require("express");
 const authRoute = require("./authRoutes");
 const jobPost = require("./jobPostRoutes")
-const appliedJobsRoutes = require('./appliedjob');
+// const appliedJobsRoutes = require('./appliedjob');
 
 
 
