@@ -15,8 +15,9 @@ app.use(bodyParser.json());
 
 
 app.use(cors({
-  origin: 'http://localhost:3000',  // Allow your frontend origin
-  credentials: true,  // If you're using cookies or authentication headers
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST','UPDATE', 'DELETE'],
+  credentials: true // If you need to send cookies, sessions, or authorization headers
 }));
 
 app.options('*', cors());
