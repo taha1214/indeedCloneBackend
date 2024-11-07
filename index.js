@@ -21,6 +21,12 @@ app.use(cors({
 
 app.options('*', cors());
 
+// Example of Express.js middleware to set CSP headers
+app.use((req, res, next) => {
+  res.setHeader("Content-Security-Policy", "default-src 'none'; script-src 'self' https://vercel.live; style-src 'self';");
+  next();
+});
+
 app.use(router);
 
 
