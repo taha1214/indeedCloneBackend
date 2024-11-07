@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 var bodyParser = require("body-parser");
-var cors = require("cors");
+// var cors = require("cors");
 // const multer = require('multer');
 const dbConnection = require("./dbConfig");
 
@@ -14,13 +14,13 @@ app.use(bodyParser.json());
 
 
 
-app.use(cors({
-  origin: 'http://localhost:3000',
-  methods: ['GET', 'POST','UPDATE', 'DELETE'],
-  credentials: true // If you need to send cookies, sessions, or authorization headers
-}));
+// app.use(cors({
+//   origin: 'http://localhost:3000',
+//   methods: ['GET', 'POST','UPDATE', 'DELETE'],
+//   credentials: true // If you need to send cookies, sessions, or authorization headers
+// }));
 
-app.options('*', cors());
+// app.options('*', cors());
 
 // Example of Express.js middleware to set CSP headers
 app.use((req, res, next) => {
